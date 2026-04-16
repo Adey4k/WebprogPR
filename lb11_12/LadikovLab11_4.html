@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form1" action="LadikovLab11_1.html">
+    <table align="center" border="1" cellspacing="0" cellpadding="5"
+    style="background-color: lightblue; border-collapse: separate; border-spacing: 1px;">
+        <tr>
+            <th  colspan="3" style="border-color:black; color: red; font-size: 2rem">Оформити замовлення</th>
+        </tr>
+        <tr>
+            <td>1.</td>
+            <td>Банківський рахунок</td>
+            <td><input required name="bank_account" type="text" maxlength="40" size="40" value=""></td>
+        </tr>
+        <tr>
+            <td>2.</td>
+            <td>Особовий номер користувача</td>
+            <td><input required name="personal_id" type="text" maxlength="40" size="40" value=""></td>
+        </tr>
+        <tr>
+            <td>3.</td>
+            <td>Товари</td>
+            <td><input type="checkbox" name="item1" class="group-required"> Товар 1<br>
+                <input type="checkbox" name="item2" class="group-required"> Товар 2<br>
+                <input type="checkbox" name="item3" class="group-required"> Товар 3<br>
+                <input type="checkbox" name="item4" class="group-required"> Товар 4<br>
+                <input type="checkbox" name="item5" class="group-required"> Товар 5<br>
+                <input type="checkbox" name="item6" class="group-required"> Товар 6</td>
+        </tr>
+        <tr>
+            <td>4.</td>
+            <td>Коментар</td>
+            <td><textarea name="about" rows="6" cols="60"></textarea></td>
+        </tr>
+        <tr>
+            <td>5.</td>
+            <td>Оплата</td>
+            <td><input type="radio" name="payment" value="cash" required>Готівка  <input type="radio" name="payment" value="card">Карткою</td>
+        </tr>
+        <tr>
+            <td>6.</td>
+            <td>Отримати додаткову інформацію</td>
+            <td><input type="checkbox" name="whatsLeft"> Дані про залишок на рахунку<br>
+                <input type="checkbox" name="lastPayments"> Інформація про останні виплати<br>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <input type="reset" value=" Відмінити введення "><br><br>
+                <input type="submit" value=" Надіслати дані та перейти до 2 етапу реєстрації "><br><br>
+            </td>
+    </table>
+    </form>
+
+
+    <script>
+    const form = document.getElementById('form1');
+    const checkboxes = form.querySelectorAll('.group-required');
+
+    form.onsubmit = function(e) {
+        const isOneChecked = Array.from(checkboxes).some(cb => cb.checked);
+        
+        if (!isOneChecked) {
+            alert('Будь ласка, оберіть хоча б один варіант.');
+            return false;
+        }
+    };
+</script>
+</body>
+</html>

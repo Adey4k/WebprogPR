@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анкета користувача віртуальної бібліотеки</title>
+</head>
+<body>
+    <form id="form1" action="LadikovLab11_1.html" method="POST">
+        <table align="center" border="1" cellspacing="0" cellpadding="5" style="background-color: lightblue; border-collapse: separate; border-spacing: 1px;">
+            <tr>
+                <th colspan="3" style="border-color:black; color: red; font-size: 2rem">Анкета користувача віртуальної бібліотеки</th>
+            </tr>
+            <tr>
+                <td>1.</td>
+                <td>Прізвище</td>
+                <td><input required name="last_name" type="text" maxlength="50" size="40"></td>
+            </tr>
+            <tr>
+                <td>2.</td>
+                <td>Ім'я</td>
+                <td><input required name="first_name" type="text" maxlength="50" size="40"></td>
+            </tr>
+            <tr>
+                <td>3.</td>
+                <td>Пароль</td>
+                <td><input required name="password" type="password" maxlength="40" size="40"></td>
+            </tr>
+            <tr>
+                <td>4.</td>
+                <td>Стать</td>
+                <td>
+                    <label><input type="radio" name="gender" value="male" required> Чоловіча</label><br>
+                    <label><input type="radio" name="gender" value="female"> Жіноча</label>
+                </td>
+            </tr>
+            <tr>
+                <td>5.</td>
+                <td>Чим займаєтеся? (оберіть одне)</td>
+                <td>
+                    <label><input type="checkbox" name="occupation" value="student"> Навчаюся</label><br>
+                    <label><input type="checkbox" name="occupation" value="employed"> Працюю за наймом</label><br>
+                    <label><input type="checkbox" name="occupation" value="freelance"> Фрілансер </label><br>
+                    <label><input type="checkbox" name="occupation" value="unemployed"> Підприємець</label><br>
+                    <label><input type="checkbox" name="occupation" value="retired"> Інше</label>
+                </td>
+            </tr>
+            <tr>
+                <td>6.</td>
+                <td>Ваш вік</td>
+                <td>
+                    <label><input type="radio" name="age_group" value="under_18" required> до 18 років</label><br>
+                    <label><input type="radio" name="age_group" value="18_25"> 18 - 25 років</label><br>
+                    <label><input type="radio" name="age_group" value="26_35"> 26 - 35 років</label><br>
+                    <label><input type="radio" name="age_group" value="36_50"> 36 - 50 років</label><br>
+                    <label><input type="radio" name="age_group" value="over_50"> 50+ років</label>
+                </td>
+            </tr>
+            <tr>
+                <td>7.</td>
+                <td>Якою тематикою цікавитеся? <br><small>(утримуйте Ctrl для множинного вибору)</small></td>
+                <td>
+                    <select name="interests" multiple size="6" required>
+                        <option value="scifi">Наукова фантастика</option>
+                        <option value="detective">Детективи та трилери</option>
+                        <option value="science">Науково-популярна література</option>
+                        <option value="history">Історія</option>
+                        <option value="it">Програмування та ІТ</option>
+                        <option value="psychology">Психологія</option>
+                        <option value="business">Бізнес та економіка</option>
+                        <option value="romance">Любовні романи</option>
+                        <option value="biography">Біографії та мемуари</option>
+                        <option value="poetry">Поезія</option>
+                        <option value="fantasy">Фентезі</option>
+                        <option value="classic">Класична література</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>8.</td>
+                <td>Що зараз читаєте?</td>
+                <td><textarea name="current_reading" rows="4" cols="40"></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="3" style="text-align: center;">
+                    <input type="reset" value=" Відмінити введення " style="margin-right: 20px;">
+                    <input type="submit" value=" Надіслати анкету ">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

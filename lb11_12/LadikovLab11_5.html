@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анкета користувача</title>
+</head>
+<body>
+    <form id="form1" action="LadikovLab11_1.html" method="POST">
+        <table align="center" border="1" cellspacing="0" cellpadding="5" style="background-color: lightblue; border-collapse: separate; border-spacing: 1px;">
+            <tr>
+                <th colspan="3" style="border-color:black; color: red; font-size: 2rem">Анкета</th>
+            </tr>
+            <tr>
+                <td>1.</td>
+                <td>Пароль</td>
+                <td><input required name="password" type="password" maxlength="40" size="40"></td>
+            </tr>
+            <tr>
+                <td>2.</td>
+                <td>Прізвище, ім'я, по-батькові</td>
+                <td><input required name="personal_id" type="text" maxlength="100" size="40"></td>
+            </tr>
+            <tr>
+                <td>3.</td>
+                <td>Держава проживання</td>
+                <td>
+                    <select name="country" required>
+                        <option value="">Оберіть державу...</option>
+                        <option value="UA">Україна</option>
+                        <option value="PL">Польща</option>
+                        <option value="DE">Німеччина</option>
+                        <option value="US">США</option>
+                        <option value="CA">Канада</option>
+                        <option value="GB">Велика Британія</option>
+                        <option value="FR">Франція</option>
+                        <option value="IT">Італія</option>
+                        <option value="ES">Іспанія</option>
+                        <option value="JP">Японія</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>4.</td>
+                <td>Поштовий індекс</td>
+                <td><input name="postal_code" type="text" maxlength="5" size="10" placeholder="00000"></td>
+            </tr>
+            <tr>
+                <td>5.</td>
+                <td>Місце проживання</td>
+                <td>
+                    <label><input type="radio" name="residence" value="kyiv" required> Київ</label><br>
+                    <label><input type="radio" name="residence" value="kharkiv"> Харків</label><br>
+                    <label><input type="radio" name="residence" value="odesa"> Одеса</label><br>
+                    <label><input type="radio" name="residence" value="dnipro"> Дніпро</label><br>
+                    <label><input type="radio" name="residence" value="lviv"> Львів</label><br>
+                    <label><input type="radio" name="residence" value="zaporizhzhia"> Запоріжжя</label><br>
+                    <label><input type="radio" name="residence" value="kryvyi_rih"> Кривий Ріг</label><br>
+                    <label><input type="radio" name="residence" value="mykolaiv"> Миколаїв</label><br>
+                    <label><input type="radio" name="residence" value="vinnytsia"> Вінниця</label><br>
+                    <label>
+                        <input type="radio" name="residence" value="other" id="residence_other"> Інше: 
+                        <input type="text" name="residence_other_text" onclick="document.getElementById('residence_other').checked = true;" placeholder="Введіть ваше місто">
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>6.</td>
+                <td>Вулиця</td>
+                <td><input name="street" type="text" size="40"></td>
+            </tr>
+            <tr>
+                <td>7.</td>
+                <td>Будинок</td>
+                <td><input name="building" type="text" size="10"></td>
+            </tr>
+            <tr>
+                <td>8.</td>
+                <td>Електронна адреса</td>
+                <td><input required name="email" type="email" size="40"></td>
+            </tr>
+            <tr>
+                <td>9.</td>
+                <td>Ваші захоплення</td>
+                <td>
+                    <label><input type="checkbox" name="hobbies" value="sport"> Спорт</label><br>
+                    <label><input type="checkbox" name="hobbies" value="music"> Музика</label><br>
+                    <label><input type="checkbox" name="hobbies" value="movies"> Кіно</label><br>
+                    <label><input type="checkbox" name="hobbies" value="reading"> Читання</label><br>
+                    <label><input type="checkbox" name="hobbies" value="traveling"> Подорожі</label><br>
+                    <label><input type="checkbox" name="hobbies" value="cooking"> Кулінарія</label><br>
+                    <label><input type="checkbox" name="hobbies" value="games"> Відеоігри</label><br>
+                    <label><input type="checkbox" name="hobbies" value="art"> Мистецтво</label><br>
+                    <label><input type="checkbox" name="hobbies" value="photography"> Фотографія</label><br>
+                    <label><input type="checkbox" name="hobbies" value="dancing"> Танці</label><br>
+                    <label>
+                        <input type="checkbox" name="hobbies" value="other" id="hobbies_other"> Інше: 
+                        <input type="text" name="hobbies_other_text" onclick="document.getElementById('hobbies_other').checked = true;" placeholder="Впишіть своє захоплення">
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>10.</td>
+                <td>Якими мовами ви володієте?</td>
+                <td>
+                    <label><input type="checkbox" name="languages" value="ukrainian"> Українська</label><br>
+                    <label><input type="checkbox" name="languages" value="english"> Англійська</label><br>
+                    <label><input type="checkbox" name="languages" value="german"> Німецька</label><br>
+                    <label><input type="checkbox" name="languages" value="french"> Французька</label><br>
+                    <label><input type="checkbox" name="languages" value="spanish"> Іспанська</label>
+                </td>
+            </tr>
+            <tr>
+                <td>11.</td>
+                <td>Ваші побажання</td>
+                <td><textarea name="wishes" rows="6" cols="40"></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <input type="reset" value=" Відмінити введення "><br><br>
+                    <input type="submit" value=" Надіслати дані та перейти до 2 етапу реєстрації ">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
