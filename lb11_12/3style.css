@@ -1,0 +1,10 @@
+table {
+    background-color: lightblue;
+    border-collapse: separate;
+    border-spacing: 1px;
+}
+th {
+    border-color: black;
+    color: red;
+    font-size: 2rem;
+}
