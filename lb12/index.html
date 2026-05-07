@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мій особистий блог - Git Cheat Sheet</title>
+    <link rel="stylesheet" href="task1_12.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-area">
+            <h1>Мій особистий блог</h1>
+            <p>Ладіков М.Ю.</p>
+        </div>
+        <div class="nav-links">
+            <a href="#">Вхід</a>
+            <a href="#">Реєстрація</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="git-cheatsheet">
+            <div class="column col-blue">
+                <h2>Create a Repository</h2>
+                <div class="command-block">
+                    <div class="command-desc">From scratch -- Create a new local repository</div>
+                    <div class="command-code">$ git init [project name]</div>
+                </div>
+                <div class="command-block">
+                    <div class="command-desc">Download from an existing repository</div>
+                    <div class="command-code">$ git clone my_url</div>
+                </div>
+
+                <h2>Observe your Repository</h2>
+                <div class="command-block">
+                    <div class="command-desc">List new or modified files not yet committed</div>
+                    <div class="command-code">$ git status</div>
+                </div>
+                <div class="command-block">
+                    <div class="command-desc">Show the changes to files not yet staged</div>
+                    <div class="command-code">$ git diff</div>
+                </div>
+                <div class="command-block">
+                    <div class="command-desc">Show the changes to staged files</div>
+                    <div class="command-code">$ git diff --cached</div>
+                </div>
+                <div class="command-block">
+                    <div class="command-desc">Show all staged and unstaged file changes</div>
+                    <div class="command-code">$ git diff HEAD</div>
+                </div>
+                <div class="command-block">
+                    <div class="command-desc">Show the changes between two commit ids</div>
+                    <div class="command-code">$ git diff commit1 commit2</div>
+                </div>
+                <div class="command-block">
+                    <div class="command-desc">List the change dates and authors for a file</div>
+                    <div class="command-code">$ git blame [file]</div>
+                </div>
+                <div class="command-block">
+                    <div class="command-desc">Show the file changes for a commit id and/or file</div>
+                    <div class="command-code">$ git show [commit]:[file]</div>
+                </div>
+                <div class="command-block">
+                    <div class="command-desc">Show full change history</div>
+                    <div class="command-code">$ git log</div>
+                </div>
+                <div class="command-block">
+                    <div class="command-desc">Show change history for file/directory including diffs</div>
+                    <div class="command-code">$ git log -p [file/directory]</div>
+                </div>
+            </div>
+
+            <div class="column col-light-green">
+                <h2>Working with Branches</h2>
+                <div class="command-block">
+                    <div class="command-desc">List all local branches</div>
+                    <div class="command-code">$ git branch</div>
+                </div>
+                <div class="command-block">
+                    <div class="command-desc">List all branches, local and remote</div>
+                    <div class="command-code">$ git branch -av</div>
+                </div>
+                <div class="command-block">
+                    <div class="command-desc">Switch to a branch, my_branch, and update working directory</div>
+                    <div class="command-code">$ git checkout my_branch</div>
+                </div>
+                <div class="command-block">
+                    <div class="command-desc">Create a new branch called new_branch</div>
+                    <div class="command-code">$ git branch new_branch</div>
+                </div>
+                <div class="command-block">
+                    <div class="command-desc">Delete the branch called my_branch</div>
+                    <div class="command-code">$ git branch -d my_branch</div>
+                </div>
+                <div class="command-block">
+                    <div class="command-desc">Merge branch_a into branch_b</div>
+                    <div class="command-code">$ git checkout branch_b<br>$ git merge branch_a</div>
+                </div>
+                <div class="command-block">
+                    <div class="command-desc">Tag the current commit</div>
+                    <div class="command-code">$ git tag my_tag</div>
+                </div>
+            </div>
+
+            <div class="column col-dark-green">
+                <h2>Make a change</h2>
+                <div class="command-block">
+                    <div class="command-desc">Stages the file, ready for commit</div>
+                    <div class="command-code">$ git add [file]</div>
+                </div>
+                <div class="command-block">
+                    <div class="command-desc">Stage all changed files, ready for commit</div>
+                    <div class="command-code">$ git add .</div>
+                </div>
+                <div class="command-block">
+                    <div class="command-desc">Commit all staged files to versioned history</div>
+                    <div class="command-code">$ git commit -m "commit message"</div>
+                </div>
+                <div class="command-block">
+                    <div class="command-desc">Commit all your tracked files to versioned history</div>
+                    <div class="command-code">$ git commit -am "commit message"</div>
+                </div>
+                <div class="command-block">
+                    <div class="command-desc">Unstages file, keeping the file changes</div>
+                    <div class="command-code">$ git reset [file]</div>
+                </div>
+                <div class="command-block">
+                    <div class="command-desc">Revert everything to the last commit</div>
+                    <div class="command-code">$ git reset --hard</div>
+                </div>
+            </div>
+
+            <div class="column col-orange">
+                <h2>Synchronize</h2>
+                <div class="command-block">
+                    <div class="command-desc">Get the latest changes from origin (no merge)</div>
+                    <div class="command-code">$ git fetch</div>
+                </div>
+                <div class="command-block">
+                    <div class="command-desc">Fetch the latest changes from origin and merge</div>
+                    <div class="command-code">$ git pull</div>
+                </div>
+                <div class="command-block">
+                    <div class="command-desc">Fetch the latest changes from origin and rebase</div>
+                    <div class="command-code">$ git pull --rebase</div>
+                </div>
+                <div class="command-block">
+                    <div class="command-desc">Push local changes to the origin</div>
+                    <div class="command-code">$ git push</div>
+                </div>
+
+                <h2>Finally!</h2>
+                <div class="command-block">
+                    <div class="command-desc">When in doubt, use git help</div>
+                    <div class="command-code">$ git command --help</div>
+                </div>
+                <div class="command-block">
+                    <div class="command-desc">Or visit <a href="https://training.github.com/" class="link-text">https://training.github.com/</a> for official GitHub training.</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        &copy; Всі права захищені.<br>
+        Розробник: студент 101ТК навчальної групи Ладіков М.Ю.
+    </footer>
+
+</body>
+</html>
